@@ -1,0 +1,55 @@
+.footer{
+    margin-top: 12px;
+    .container{
+        padding-top: clamp(16px, 5vw, 96px);
+        padding-bottom: clamp(16px, 5vw, 96px);
+        background: var(--white);
+        border-radius: clamp(var(--radius-8), 2vw, var(--radius-24));
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+    }
+    &__item{
+        &-list{
+            display: grid;
+            row-gap: 16px;
+        }
+        &-link{
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+    }
+    &__logo{
+        margin-bottom: 24px;
+        display: inline-block;
+    }
+    &__txt{
+        font-weight: 500;
+        color: var(--primary-color);
+    }
+    &__title{
+        color: var(--primary-color);
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+    &__form{
+        background: var(--primary-color);
+        border-radius: var(--radius-8);
+        padding: 16px;
+        &-txt{
+            color: var(--white);
+            font-weight: 600;
+        }
+        &-inp{
+            background: #24353C;
+            margin-top: 16px;
+            margin-bottom: 12px;
+            width: 100%;
+        }
+        &-btn{
+            width: 100%;
+        }
+    }
+    
+}

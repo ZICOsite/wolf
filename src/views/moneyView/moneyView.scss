@@ -4,7 +4,7 @@
         background: var(--primary-color);
         padding-top: clamp(16px, 5vw, 96px);
         padding-bottom: clamp(16px, 5vw, 96px);
-        border-radius: var(--radius-8);
+        border-radius: clamp(var(--radius-8), 2vw, var(--radius-24));
     }
 
     &__title {
