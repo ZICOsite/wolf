@@ -1,10 +1,10 @@
 .statistics {
 
     .container {
-        padding-top: 96px;
-        padding-bottom: 96px;
         background: var(--white);
-        border-radius: var(--radius-24);
+        padding-top: clamp(16px, 5vw, 96px);
+        padding-bottom: clamp(16px, 5vw, 96px);
+        border-radius: clamp(var(--radius-8), 2vw, var(--radius-24));
     }
 
     &__cards {
