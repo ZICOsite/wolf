@@ -1,9 +1,11 @@
 <script setup>
-import StatisticsView from "@/views/statisticsView/StatisticsView.vue"
+import StatisticsView from "@/views/statisticsView/StatisticsView.vue";
+import ProgramsView from "@/views/programsView/ProgramsView.vue";
 </script>
 
 <template>
   <main>
-    <StatisticsView/>
+    <StatisticsView />
+    <ProgramsView />
   </main>
 </template>
