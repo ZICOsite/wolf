@@ -7,7 +7,7 @@
         border-radius: clamp(var(--radius-8), 2vw, var(--radius-24));
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 16px;
+        gap: 30px;
     }
     &__item{
         &-list{

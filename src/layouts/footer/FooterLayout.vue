@@ -43,9 +43,9 @@ import Button from "@/components/UI/Button.vue";
     </div>
     <Form class="footer__form">
         <Typography tagName="p" class="footer__form-txt">
-            Подпишитесь на нашу рассылку и получайте полезные материалы change
+            Подпишитесь на нашу рассылку и получайте полезные материалы
         </Typography>
-        <Input class="footer__form-inp" placeholder="Электронная почта"></Input>
+        <Input class="footer__form-inp" placeholder="Электронная почта" />
         <Button bg="var(--white)" color="var(--primary-color)" class="footer__form-btn">Подписаться</Button> 
     </Form>
     </div>
