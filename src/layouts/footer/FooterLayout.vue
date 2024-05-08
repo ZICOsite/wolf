@@ -1,7 +1,7 @@
 <script setup>
 import Input from "@/components/UI/Input.vue";
 import Typography from "@/components/UI/Typography.vue";
-import {  } from "@/components/UI/Form.vue";
+import Form from "@/components/UI/Form.vue";
 import Button from "@/components/UI/Button.vue";
 </script>
 
@@ -43,10 +43,10 @@ import Button from "@/components/UI/Button.vue";
     </div>
     <Form class="footer__form">
         <Typography tagName="p" class="footer__form-txt">
-            Подпишитесь на нашу рассылку и получайте полезные материалы
+            Подпишитесь на нашу рассылку и получайте полезные материалы change
         </Typography>
         <Input class="footer__form-inp" placeholder="Электронная почта"></Input>
-        <Button bg="var(--white)" color="var(--primary-color)" class="footer__form-btn">Подписаться</Button>
+        <Button bg="var(--white)" color="var(--primary-color)" class="footer__form-btn">Подписаться</Button> 
     </Form>
     </div>
   </footer>
