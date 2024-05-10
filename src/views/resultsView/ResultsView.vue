@@ -11,7 +11,7 @@ import Typography from "@/components/UI/Typography.vue";
       </Typography>
       <div class="results__cards">
         <Card class="results__card" v-for="item in 3" :key="item">
-          <RouterLink class="results__card-link">
+          <RouterLink class="results__card-link" to="/">
             <img src="@i/card-img.png" alt="" class="results__card-img" />
             <Typography tagName="h3" class="results__card-title">
               Milliard Club
