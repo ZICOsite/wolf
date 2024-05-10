@@ -1,0 +1,52 @@
+.sales {
+    .container {
+        padding-top: clamp(16px, 5vw, 64px);
+        padding-bottom: clamp(16px, 5vw, 64px);
+        background: var(--white);
+        border-radius: clamp(var(--radius-8), 2vw, var(--radius-24));
+    }
+
+    &__swiper {
+        &-item{
+            display: flex;
+            flex-direction: column;
+            row-gap: 12px;
+        }
+        &-content {
+            text-align: center;
+            @media(width <= 576px){
+                order: 1;
+            }
+        }
+
+        &-txt {
+            color: var(--primary-color);
+            width: min(1000px, 100%);
+            margin: 12px auto 24px;
+            font-weight: 500;
+            font-size: 24px;
+        }
+        
+        &-buttons {
+            display: flex;
+            column-gap: 16px;
+            justify-content: flex-end;
+            margin-top: 30px;
+        }
+
+        &-next,
+        &-prev {
+            cursor: pointer;
+            width: 48px;
+            height: 48px;
+            background: var(--primary-color);
+            border-radius: var(--radius-circle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media(width <= 576px){
+                display: none;
+            }
+        }
+    }
+}
