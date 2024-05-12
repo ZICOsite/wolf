@@ -1,0 +1,58 @@
+.problems {
+    .container {
+        padding-top: clamp(16px, 5vw, 64px);
+        padding-bottom: clamp(16px, 5vw, 64px);
+        border-radius: clamp(var(--radius-8), 2vw, var(--radius-24));
+        background: var(--white);
+    }
+
+    &__title {
+        text-align: left;
+        margin-bottom: 16px;
+    }
+
+    &__txt {
+        color: var(--ternary-color);
+        margin-bottom: clamp(16px, 5vw, 64px);
+    }
+
+    &__banner {
+        width: 100%;
+        aspect-ratio: 4/2;
+        border-radius: var(--radius-4);
+        margin-bottom: clamp(16px, 5vw, 64px);
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    }
+
+    &__item {
+        @media(width <= 576px){
+            padding: clamp(8px, 2vw, 16px) 0;
+            &:not(:last-of-type){
+                border-bottom: 1px solid var(--secondary-color);
+            }
+        }
+        &-icon {
+            padding: clamp(11.5px, 2vw, 12px) clamp(16.5px, 2vw, 19px);
+            font-weight: 500;
+            font-size: clamp(14px, 2vw, 20px);
+            line-height: clamp(16px, 2vw, 24px);
+            color: var(--primary-color);
+            background: #1A2B321A;
+            display: inline-block;
+            margin-bottom: clamp(8px, 2vw, 16px);
+        }
+        &-title{
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: clamp(16px, 2vw, 24px);
+        }
+        &-txt{
+            color: var(--ternary-color);
+            font-size: 16px;
+        }
+    }
+}

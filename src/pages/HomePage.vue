@@ -11,7 +11,7 @@ import SalesView from "@/views/salesView/SalesView.vue";
     <SalesView/>
     <StatisticsView />
     <ProgramsView />
-    <ResultsView />
+    <ResultsView title="Посмотрите результаты компаний, которым мы построили отдел продаж"/>
     <MoneyView />
   </main>
 </template>

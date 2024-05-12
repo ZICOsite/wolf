@@ -3,10 +3,10 @@ import Typography from "@/components/UI/Typography.vue";
 import "swiper/css/navigation";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay,Pagination } from "swiper/modules";
 import Button from "@/components/UI/Button.vue";
 import { IconArrow } from "@/components/icons/icons";
-const modules = ref([Navigation, Autoplay]);
+const modules = ref([Navigation, Autoplay,Pagination]);
 const navigationButtons = {
   nextEl: ".sales__swiper-next",
   prevEl: ".sales__swiper-prev",
@@ -22,6 +22,7 @@ const navigationButtons = {
         :autoplay="true"
         class="mySwiper sales__swiper"
         :loop="true"
+        :pagination="true"
       >
         <swiper-slide class="sales__swiper-slide" v-for="item in 3" :key="item">
           <div class="sales__swiper-item">

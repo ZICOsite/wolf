@@ -1,0 +1,50 @@
+.sales-banner {
+    .container {
+        padding-top: clamp(16px, 5vw, 80px);
+        padding-bottom: clamp(16px, 5vw, 48px);
+        background: url(@i/sales-banner.png);
+        border-radius: clamp(var(--radius-8), 2vw, var(--radius-24));
+        text-align: center;
+        @media(width<=576px){
+            text-align: left;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 16px;
+        color: var(--white);
+        margin-bottom: 64px;
+        @media(width<=576px){
+            align-items: flex-start;
+        }
+    }
+
+    &__abovetitle {
+        padding: 12px 16px;
+        font-weight: 500;
+        font-size: 16px;
+        background: #FFFFFF1A;
+    }
+
+    &__title {
+        color: var(--white);
+        @media(width<=576px){
+            text-align: left;
+        }
+    }
+
+    &__txt {
+        width: min(100%, 800px);
+        font-size: clamp(16px, 5vw, 24px);
+    }
+
+    &__btn {
+        width: 286px;
+        @media(width<=576px){
+            width: 100%;
+        }
+    }
+}

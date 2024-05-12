@@ -5,7 +5,6 @@
         background: var(--white);
         border-radius: clamp(var(--radius-8), 2vw, var(--radius-24));
     }
-
     &__swiper {
         &-item{
             display: flex;
@@ -16,15 +15,20 @@
             text-align: center;
             @media(width <= 576px){
                 order: 1;
+                text-align: left;
             }
         }
-
+        &-title{
+            @media(width <= 576px){
+                text-align: left;
+            }
+        }
         &-txt {
             color: var(--primary-color);
             width: min(1000px, 100%);
             margin: 12px auto 24px;
             font-weight: 500;
-            font-size: 24px;
+            font-size: clamp(16px, 5vw, 24px);
         }
         
         &-buttons {
@@ -46,6 +50,24 @@
             justify-content: center;
             @media(width <= 576px){
                 display: none;
+            }
+        }
+        .swiper-pagination{
+            display: none;
+            column-gap: 5px;
+            margin-top: 19px;
+            @media(width <= 576px){
+                display: flex;
+            }
+            .swiper-pagination-bullet{
+                width: 6px;
+                height: 6px;
+                border-radius: var(--radius-circle);
+                background: var(--primary-color);
+                opacity: 0.15;
+                &.swiper-pagination-bullet-active{
+                    opacity: 1;
+                }
             }
         }
     }
