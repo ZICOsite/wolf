@@ -67,5 +67,10 @@
             background: #1A2B321A;
 
         }
+        &-txt{
+            font-weight: 700;
+            font-size: clamp(16px, 2vw, 20px);
+            -webkit-line-clamp: 5;
+        }
     }
 }

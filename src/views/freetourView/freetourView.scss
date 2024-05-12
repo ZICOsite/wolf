@@ -1,0 +1,37 @@
+.freetour{
+    .container{
+        padding-top: clamp(16px, 5vw, 64px);
+        padding-bottom: clamp(16px, 5vw, 64px);
+        border-radius: clamp(var(--radius-8), 2vw, var(--radius-24));
+    }
+    &__title{
+        margin-bottom: clamp(8px, 2vw, 16px);
+        @media(width<=576px){
+            text-align: left;
+        }
+    }
+    &__txt{
+         font-size: clamp(16px, 5vw, 20px);
+         font-weight: 500;
+         width: min(100%, 800px);
+         color: var(--ternary-color);
+         margin: 0 auto;
+         text-align: center;
+         @media(width<=576px){
+            text-align: left;
+        }
+    }
+    &__form{
+        margin-top: clamp(16px, 5vw, 48px);
+        display: flex;
+        justify-content: center;
+        column-gap: 16px;
+        row-gap: 12px;
+        flex-wrap: wrap;
+        @media(width<=576px){
+            *{
+                width: 100%;
+            }
+        }
+    }
+}
