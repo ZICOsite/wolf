@@ -3,7 +3,7 @@
 const props = defineProps({
     bg: String,
     color: String
-})
+}) 
 
 </script>
 

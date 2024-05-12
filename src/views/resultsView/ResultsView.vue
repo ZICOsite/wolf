@@ -1,13 +1,16 @@
 <script setup>
 import Card from "@/components/UI/Card.vue";
 import Typography from "@/components/UI/Typography.vue";
+const props = defineProps({
+  title: String,
+});
 </script>
 
 <template>
   <section class="results">
     <div class="container">
       <Typography tagName="h2" class="results__title title">
-        Посмотрите результаты компаний, которым мы построили отдел продаж
+        {{ title }}
       </Typography>
       <div class="results__cards">
         <Card class="results__card" v-for="item in 3" :key="item">
