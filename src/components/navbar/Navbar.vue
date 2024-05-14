@@ -33,10 +33,10 @@ const dropdownList = ref(false)
             <RouterLink to="/about" class="nav__link" @click="menuToggle = false, dropdownList = false">Кейсы</RouterLink>
           </li>
           <li class="nav__item">
-            <RouterLink to="/" class="nav__link" @click="menuToggle = false, dropdownList = false">О компании</RouterLink>
+            <RouterLink to="/about" class="nav__link" @click="menuToggle = false, dropdownList = false">О компании</RouterLink>
           </li>
           <li class="nav__item">
-            <RouterLink to="/" class="nav__link" @click="menuToggle = false, dropdownList = false">Контакты</RouterLink>
+            <RouterLink to="/contacts" class="nav__link" @click="menuToggle = false, dropdownList = false">Контакты</RouterLink>
           </li>
         </ul>
         <a href="#!" download>

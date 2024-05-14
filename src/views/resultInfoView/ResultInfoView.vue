@@ -1,6 +1,6 @@
 <script setup>
 import Typography from "@/components/UI/Typography.vue";
-const resultItems = [
+const resultItems = [ 
   {
     icon: "🏆",
     text: "Сформулируете лучшее предложение на вашем рынке",
@@ -26,9 +26,10 @@ const resultItems = [
     text: "Научитесь искать ТОПовых продавцов на рынке",
   },
   {
-    icon: "🧑‍💻",
+    icon: "👨‍💻",
     text: "Внедрите скрипты и все передовые технологии продаж",
-  },{
+  },
+  {
     icon: "💸",
     text: "Создадите конкурентную среду в отделе продаж. Замотивируете менеджеров развиваться и перевыполнять планы",
   },
@@ -48,7 +49,7 @@ const resultItems = [
         <div class="result-info__item" v-for="item in resultItems" :key="item">
           <span class="result-info__item-icon">{{ item.icon }}</span>
           <p class="result-info__item-txt ellipsis">
-            {{item.text}}
+            {{ item.text }}
           </p>
         </div>
       </div>

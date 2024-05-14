@@ -23,6 +23,7 @@ const navigationButtons = {
         class="mySwiper sales__swiper"
         :loop="true"
         :pagination="true"
+        :spaceBetween="10"
       >
         <swiper-slide class="sales__swiper-slide" v-for="item in 3" :key="item">
           <div class="sales__swiper-item">
