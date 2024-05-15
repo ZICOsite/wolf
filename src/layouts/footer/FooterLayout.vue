@@ -9,7 +9,7 @@ import Button from "@/components/UI/Button.vue";
   <footer class="footer">
     <div class="container">
       <div class="footer__item">
-        <RouterLink class="footer__logo"
+        <RouterLink to="/" class="footer__logo"
           ><img src="@i/logo.svg" alt=""
         /></RouterLink>
         <p class="footer__txt">

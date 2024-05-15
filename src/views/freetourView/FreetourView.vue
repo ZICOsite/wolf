@@ -1,6 +1,5 @@
 <script setup>
 import Typography from "@/components/UI/Typography.vue";
-// import Form from "@/components/UI/Form.vue";
 import Button from "@/components/UI/Button.vue";
 const props = defineProps({
   inputBg: String,
@@ -24,8 +23,8 @@ const props = defineProps({
         управления
       </Typography>
       <form class="freetour__form" action="">
-        <input type="text" class="freetour__inp" placeholder="Имя" />
-        <input type="text" class="freetour__inp" placeholder="Номер телефона" />
+        <input type="text" class="freetour__inp" placeholder="Имя" required />
+        <input type="text" class="freetour__inp" placeholder="Номер телефона" required />
         <Button class="freetour__btn" :bg="btnBg" :color="btnColor"
           >Записаться на экскурсию</Button
         >
