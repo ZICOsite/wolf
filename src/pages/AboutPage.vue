@@ -1,10 +1,10 @@
 <script setup>
-import Typography from "@/components/UI/Typography.vue";
+import AboutView from "@/views/aboutView/AboutView.vue";
 
 </script>
 
 <template>
   <main>
-    <Typography tagName="h1"></Typography>
+    <AboutView/>
   </main>
 </template>
