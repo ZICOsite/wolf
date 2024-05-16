@@ -1,0 +1,29 @@
+.clients {
+    
+    .container {
+        padding-top: clamp(16px, 5vw, 64px);
+        padding-bottom: clamp(16px, 5vw, 64px);
+        background: var(--white);
+        border-radius: clamp(var(--radius-8), 2vw, var(--radius-24));
+    }
+    
+    &__title {
+        margin-bottom: clamp(24px, 5vw, 64px);
+    }
+    
+    &__carousel {
+        &-slider .swiper-wrapper {
+            transition-duration: 2s !important;
+            transition-timing-function: linear;
+        }
+        
+        &-image {
+            width: 100%;
+            aspect-ratio: 1;
+            background: var(--secondary-color);
+            border-radius: var(--radius-8);
+            object-fit: scale-down;
+            padding: 5px 10px;
+        }
+    }
+}
