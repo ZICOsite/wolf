@@ -29,8 +29,6 @@ const breakpoints = {
           class="clients__carousel-slider"
           :modules="modules"
           :spaceBetween="16"
-          :loop="true"
-          :noSwiping="true"
           :breakpoints="breakpoints"
           :autoplay="{
             delay: 0,
