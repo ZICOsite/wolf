@@ -1,0 +1,34 @@
+.communication {
+  .container {
+    padding-top: clamp(16px, 5vw, 96px);
+    padding-bottom: clamp(16px, 5vw, 96px);
+    background: var(--white);
+    border-radius: clamp(var(--radius-8), 2vw, var(--radius-24));
+  }
+
+  &__title {
+    text-align: left;
+    margin-bottom: clamp(16px, 5vw, 64px);
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(283px, 1fr));
+    gap: 16px;
+  }
+
+  &__card {
+    background: var(--secondary-color);
+    border-radius: var(--radius-8);
+    padding: 16px;
+
+    &-title {
+        margin-bottom: 10px;
+    }
+
+    &-call {
+      font-weight: 600;
+      color: var(--ternary-color);
+    }
+  }
+}
