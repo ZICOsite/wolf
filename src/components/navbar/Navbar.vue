@@ -30,7 +30,7 @@ const dropdownList = ref(false)
             </ul>
           </li>
           <li class="nav__item">
-            <RouterLink to="/about" class="nav__link" @click="menuToggle = false, dropdownList = false">Кейсы</RouterLink>
+            <RouterLink to="/cases" class="nav__link" @click="menuToggle = false, dropdownList = false">Кейсы</RouterLink>
           </li>
           <li class="nav__item">
             <RouterLink to="/about" class="nav__link" @click="menuToggle = false, dropdownList = false">О компании</RouterLink>

@@ -80,3 +80,30 @@ input {
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
+.pagination-container {
+  display: flex;
+  column-gap: 16px;
+  margin-top: 48px;
+  justify-content: center;
+}
+.paginate-buttons {
+  height: 48px;
+  width: 48px;
+  border-radius: var(--radius-circle);
+  cursor: pointer;
+  background: var(--secondary-color);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ternary-color);
+}
+.paginate-buttons:hover {
+  background-color: #d8d8d8;
+}
+.active-page {
+  background: var(--primary-color);
+  color: var(--white);
+}
+.active-page:hover {
+    background: var(--primary-color);
+}

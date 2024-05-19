@@ -21,9 +21,7 @@ const breakpoints = {
 <template>
   <section class="clients">
     <div class="container">
-      <Typography class="clients__title title" tagName="h2"
-        >Среди наших клиентов</Typography
-      >
+      <Typography class="clients__title title" tagName="h2">Среди наших клиентов</Typography>
       <div class="clients__carousel">
         <Swiper
           class="clients__carousel-slider"
