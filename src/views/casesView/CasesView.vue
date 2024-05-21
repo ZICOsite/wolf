@@ -31,8 +31,8 @@ const test = async (type = "") => {
   const res = await axios.get(
     `http://45.153.70.250:8000/api/v1/site/case/list/?type=${type}`
   );
-  console.log(res);
-  ts.value = res.data;
+  // console.log(res);
+  // ts.value = res.data;
 };
 
 test();
@@ -61,15 +61,17 @@ const currentPage = ref(1);
           </li>
         </ul>
         <div class="cases__content-cards">
-          <Card class="cases__card" v-for="item in ts" :key="item">
-            <img src="@i/card-img.png" alt="" class="cases__card-image" />
-            <Typography tagName="h3" class="cases__card-title">Milliard Club</Typography>
-            <Typography tagName="p" class="cases__card-txt">Подняли перформанс команды на 26% и помогли вырасти в 2х больше</Typography>
-          </Card>
+          <RouterLink :to="'/case/' + item" v-for="item in 9" :key="item" class="cases__content-link">
+            <Card class="cases__card">
+              <img src="@i/card-img.png" alt="" class="cases__card-image" />
+              <Typography tagName="h3" class="cases__card-title">Milliard Club</Typography>
+              <Typography tagName="p" class="cases__card-txt">Подняли перформанс команды на 26% и помогли вырасти в 2х больше</Typography>
+            </Card>
+          </RouterLink>
         </div>
         <vue-awesome-paginate
           class="cases__content-paginate"
-          :total-items="ts.length"
+          :total-items="20"
           :items-per-page="9"
           :max-pages-shown="5"
           v-model="currentPage"

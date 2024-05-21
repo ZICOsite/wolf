@@ -20,6 +20,11 @@ const router = createRouter({
       component: () => import("@/pages/CasesPage.vue"),
     },
     {
+      path: "/case/:id",
+      name: "case",
+      component: () => import("@/pages/CasePage.vue"),
+    },
+    {
       path: "/about",
       name: "about",
       component: () => import("@/pages/AboutPage.vue"),
