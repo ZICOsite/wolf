@@ -55,12 +55,13 @@
       border-radius: var(--radius-4);
       margin-bottom: clamp(20px, 5vw, 58px);
       object-fit: cover;
-
+      min-height: 220px;
       @media (width <= 870px) {
         height: 250px;
       }
 
       @media (width <= 414px) {
+        min-height: auto;
         height: auto;
       }
     }

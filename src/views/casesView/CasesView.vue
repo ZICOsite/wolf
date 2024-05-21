@@ -1,8 +1,9 @@
 <script setup>
 import Card from "@/components/UI/Card.vue";
+import Skeleton from "@/components/UI/Skeleton.vue";
 import Typography from "@/components/UI/Typography.vue";
 import { IconArrow } from "@/components/icons/icons";
-import axios from "axios";
+import useFetch from "@/services/api";
 
 const casesList = [
   {
@@ -25,20 +26,16 @@ const casesList = [
 
 const activeList = ref(0);
 
-const ts = ref(null);
+const { data, isFetching, fetchData } = useFetch();
 
-const test = async (type = "") => {
-  const res = await axios.get(
-    `http://45.153.70.250:8000/api/v1/site/case/list/?type=${type}`
-  );
-  // console.log(res);
-  // ts.value = res.data;
+const test = (type = "") => {
+  fetchData("case/list/?type=" + type);
 };
 
-test();
+fetchData("case/list/");
 
 const onClickHandler = (page) => {
-  console.log(page);
+  fetchData("case/list/?page=" + page);
 };
 
 const currentPage = ref(1);
@@ -61,17 +58,30 @@ const currentPage = ref(1);
           </li>
         </ul>
         <div class="cases__content-cards">
-          <RouterLink :to="'/case/' + item" v-for="item in 9" :key="item" class="cases__content-link">
-            <Card class="cases__card">
-              <img src="@i/card-img.png" alt="" class="cases__card-image" />
-              <Typography tagName="h3" class="cases__card-title">Milliard Club</Typography>
-              <Typography tagName="p" class="cases__card-txt">Подняли перформанс команды на 26% и помогли вырасти в 2х больше</Typography>
-            </Card>
-          </RouterLink>
+          <Skeleton :loader="isFetching" :count="6">
+            <template #default>
+              <RouterLink
+                :to="'/case/' + item.id"
+                v-for="item in data?.results"
+                :key="item"
+                class="cases__content-link"
+              >
+                <Card class="cases__card">
+                  <img :src="item.image" alt="" class="cases__card-image" />
+                  <Typography tagName="h3" class="cases__card-title">{{
+                    item.company_name
+                  }}</Typography>
+                  <Typography tagName="p" class="cases__card-txt">{{
+                    item.title
+                  }}</Typography>
+                </Card>
+              </RouterLink>
+            </template>
+          </Skeleton>
         </div>
         <vue-awesome-paginate
           class="cases__content-paginate"
-          :total-items="20"
+          :total-items="+data?.count"
           :items-per-page="9"
           :max-pages-shown="5"
           v-model="currentPage"
@@ -84,7 +94,7 @@ const currentPage = ref(1);
           </template>
           <template #next-button>
             <span>
-                <IconArrow direction="right"/>
+              <IconArrow direction="right"/>
             </span>
           </template>
         </vue-awesome-paginate>
