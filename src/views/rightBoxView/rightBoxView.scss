@@ -1,0 +1,32 @@
+.rightbox {
+    .container {
+        padding-top: clamp(16px, 5vw, 32px);
+        padding-bottom: clamp(16px, 5vw, 32px);
+        background: var(--primary-color);
+        border-radius: clamp(var(--radius-8), 2vw, var(--radius-24));
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        @media(width< 896px){
+            row-gap: clamp(16px, 5vw, 40px);
+        }
+    }
+
+    &__title {
+        text-align: left;
+        color: var(--white);
+        margin-bottom: clamp(8px, 5vw, 16px);
+    }
+    &__txt {
+        color: var(--white);
+        font-size: clamp(16px, 5vw, 24px);
+        margin-bottom: clamp(0px, 5vw, 40px);
+    }
+    &__img {
+        border-radius: var(--radius-8);
+        @media(width< 896px){
+            order: -1;
+        }
+    }
+}
