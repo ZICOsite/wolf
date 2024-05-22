@@ -1,0 +1,65 @@
+.workshop {
+    .container {
+        background: var(--white);
+        padding-top: clamp(16px, 5vw, 96px);
+        padding-bottom: clamp(16px, 5vw, 96px);
+        border-radius: clamp(var(--radius-8), 2vw, var(--radius-24));
+    }
+
+    &__title {
+        margin-bottom: clamp(24px, 5vw, 64px);
+
+        @media (width <= 1320px) {
+            text-align: left;
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(559px, 1fr));
+        gap: 30px 64px;
+
+        @media (width <= 1320px) {
+            grid-template-columns: 1fr;
+        }
+
+        &-desc {
+            display: grid;
+            gap: clamp(30px, 5vw, 64px);
+        }
+
+        &-item {
+            display: grid;
+            gap: 16px;
+
+            span {
+                font-weight: bold;
+                font-size: 32px;
+            }
+
+        }
+
+        &-txt {
+            font-weight: 500;
+            color: var(--ternary-color);
+            line-height: 150%;
+            font-size: clamp(16px, 5vw, 24px);
+        }
+
+        &-image {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: var(--radius-8);
+
+            @media (width <= 1320px) {
+                aspect-ratio: 5/2;
+                order: -1;
+            }
+
+            @media (width <= 576px) {
+                aspect-ratio: unset;
+            }
+        }
+    }
+}

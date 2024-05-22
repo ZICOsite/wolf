@@ -28,11 +28,14 @@ const breakpoints = {
           :modules="modules"
           :spaceBetween="16"
           :breakpoints="breakpoints"
+          :speed="2000"
+          :loop="true"
+          :allowTouchMove="false"
           :autoplay="{
             delay: 0,
           }"
         >
-          <SwiperSlide v-for="item in 20" :key="item">
+          <SwiperSlide v-for="item in 10" :key="item">
             <img src="@i/logo.svg" alt="" class="clients__carousel-image" />
           </SwiperSlide>
         </Swiper>
