@@ -1,6 +1,9 @@
 <script setup>
 import Typography from "@/components/UI/Typography.vue";
 import Button from "@/components/UI/Button.vue";
+import Modal from "@/components/UI/Modal.vue";
+import Input from "@/components/UI/Input.vue";
+import Form from "@/components/UI/Form.vue";
 const props = defineProps({
   inputBg: String,
   inputColor: String,
@@ -9,7 +12,7 @@ const props = defineProps({
   btnBg:String,
   btnColor:String
 });
-
+const modal = ref(false)
 </script>
 <template>
   <section class="freetour">
@@ -22,7 +25,7 @@ const props = defineProps({
         скрипты, регламенты, систему обучения персонала, систему контроля и
         управления
       </Typography>
-      <form class="freetour__form" action="">
+      <form class="freetour__form" action="" @submit.prevent="modal = true">
         <input type="text" class="freetour__inp" placeholder="Имя" required />
         <input type="text" class="freetour__inp" placeholder="Номер телефона" required />
         <Button class="freetour__btn" :bg="btnBg" :color="btnColor"
@@ -30,6 +33,15 @@ const props = defineProps({
         >
       </form>
     </div>
+    <Teleport to="#body" v-if="modal">
+      <Modal @click="modal = false">
+        <Form @click.stop>
+            <Typography tag-name="h2" class="form__title">Введите код подтверждения</Typography>
+            <Input placeholder="Код подтверждения" />
+            <Button bg="var(--white)" color="var(--primary-color)">Скачать</Button>
+        </Form>
+    </Modal>
+    </Teleport>
   </section>
 </template>
 <style lang="scss" scoped>
