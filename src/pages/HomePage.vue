@@ -4,6 +4,7 @@ import ProgramsView from "@/views/programsView/ProgramsView.vue";
 import ResultsView from "@/views/resultsView/ResultsView.vue";
 import MoneyView from "@/views/moneyView/MoneyView.vue";
 import SalesView from "@/views/salesView/SalesView.vue";
+
 </script>
 
 <template>
@@ -13,5 +14,6 @@ import SalesView from "@/views/salesView/SalesView.vue";
     <ProgramsView />
     <ResultsView title="Посмотрите результаты компаний, которым мы построили отдел продаж"/>
     <MoneyView />
+   
   </main>
 </template>
