@@ -19,13 +19,13 @@ const dropdownList = ref(false)
             <span class="nav__link" @click="dropdownList = !dropdownList">Программы <IconDropdown/></span>
             <ul class="nav__dropdown" :class="{'active': dropdownList}">
               <li class="nav__dropdown-item">
-                <RouterLink to="/course" class="nav__dropdown-link" @click="menuToggle = false, dropdownList = false">СFA</RouterLink>
+                <RouterLink to="/course" class="nav__dropdown-link" @click="menuToggle = false, dropdownList = false">SDR</RouterLink>
               </li>
               <li class="nav__dropdown-item">
-                <RouterLink to="/" class="nav__dropdown-link" @click="menuToggle = false, dropdownList = false">Название программы</RouterLink>
+                <RouterLink to="/" class="nav__dropdown-link" @click="menuToggle = false, dropdownList = false">Бизнес консалтинг</RouterLink>
               </li>
               <li class="nav__dropdown-item">
-                <RouterLink to="/" class="nav__dropdown-link" @click="menuToggle = false, dropdownList = false">Название программы</RouterLink>
+                <RouterLink to="/" class="nav__dropdown-link" @click="menuToggle = false, dropdownList = false">Автоматизация бизнеса</RouterLink>
               </li>
             </ul>
           </li>
