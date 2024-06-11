@@ -1,16 +1,14 @@
-# Используем официальный образ Node.js
-FROM node:20-alpine
-
-# Установка зависимостей
+# этап сборки (build stage)
+FROM node:18-alpine3.18 as build-stage
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
-
-# Копирование остальных файлов проекта
 COPY . .
+RUN npm run build
 
-# Установка нужного порта
-EXPOSE 5173
-
-# Команда для запуска приложения
-CMD ["npm", "run", "dev"]
+# этап production (production-stage)
+FROM nginx:1.24-alpine3.17 as production-stage
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY --from=build-stage /app/dist /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
