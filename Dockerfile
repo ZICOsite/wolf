@@ -1,15 +1,13 @@
 FROM node:20-alpine
 
+# Установка зависимостей
 WORKDIR /app
-
 COPY package*.json ./
-
 RUN npm install
 
+# Копирование остальных файлов
 COPY . .
 
-RUN npm run build
-
-RUN npm install -g serve
-
-CMD ["serve", "-s", "dist"]
+# Запуск приложения
+EXPOSE 5173
+CMD ["npm", "run", "dev"]
