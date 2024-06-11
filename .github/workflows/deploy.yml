@@ -24,7 +24,7 @@ jobs:
 
     - name: SSH and deploy
       run: |
-        ssh user@server_ip <<EOF
+        ssh root@77.232.137.28 <<EOF
           cd /path/to/destination_directory
           sudo docker-compose down
           sudo docker-compose up --build -d
