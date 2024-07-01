@@ -34,11 +34,12 @@ import Button from "@/components/UI/Button.vue";
             Реквизиты
         </Typography>
         <ul class="footer__item-list">
-            <li><RouterLink to="/" class="footer__item-link">ИПР Сбер</RouterLink></li>
-            <li><RouterLink to="/" class="footer__item-link">ИНН 213901283019</RouterLink></li>
-            <li><RouterLink to="/" class="footer__item-link">ОГР 74567459684</RouterLink></li>
-            <li><RouterLink to="/" class="footer__item-link">ОГР 74567459684</RouterLink></li>
-            <li><RouterLink to="/" class="footer__item-link">Ташкент, Узбекистан</RouterLink></li>
+            <li><span class="footer__item-link">Адрес: г.Ташкент, Мирабадский р-н, Минг Урик МСГ, ул. Шахрисабз, 5а</span></li>
+            <li><span class="footer__item-link">Р/с сум: 2020 8000 7055 6443 1001 в АКБ “InFinBank”</span></li>
+            <li><span class="footer__item-link">МФО: 01041</span></li>
+            <li><span class="footer__item-link">ИНН: 309 835 583</span></li>
+            <li><span class="footer__item-link">ОКЭД: 70220</span></li>
+            <li><span class="footer__item-link">Директор ___________________/ Валиханов С. К.</span></li>
         </ul>
     </div>
     <Form class="footer__form">

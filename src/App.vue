@@ -7,7 +7,9 @@ import { RouterView } from "vue-router";
 <template>
   <div class="wrapper">
     <HeaderLayout />
-    <RouterView />
+    <RouterView v-slot="{ Component }">
+      <component :is="Component" :key="$route.fullPath"></component>
+    </RouterView>
     <FooterLayout />
   </div>
 </template>
