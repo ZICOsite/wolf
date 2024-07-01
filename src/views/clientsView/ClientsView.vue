@@ -43,6 +43,9 @@ const breakpoints = {
           <SwiperSlide v-for="item in data" :key="item.name">
             <img :src="item.logo" alt="" class="clients__carousel-image" />
           </SwiperSlide>
+          <SwiperSlide v-for="item in data" :key="item.name">
+            <img :src="item.logo" alt="" class="clients__carousel-image" />
+          </SwiperSlide>
         </Swiper>
       </div>
     </div>

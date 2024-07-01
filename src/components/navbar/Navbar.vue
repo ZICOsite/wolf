@@ -2,9 +2,14 @@
 import { RouterLink } from "vue-router";
 import Button from "@/components/UI/Button.vue";
 import { IconDropdown } from "@/components/icons/icons";
+import useFetch from "@/services/api";
 import { useProgrammListStore } from "@/stores/programmListStore";
+const { data, isFetching, fetchData } = useFetch();
+
+fetchData("program/list/");
 
 const programmListStore = useProgrammListStore();
+programmListStore.setProgrammList(data);
 
 const menuToggle = ref(false);
 const dropdownList = ref(false);
@@ -28,14 +33,14 @@ const dropdownList = ref(false);
             <ul class="nav__dropdown" :class="{ active: dropdownList }">
               <li
                 class="nav__dropdown-item"
-                v-for="item in programmListStore?.getProgrammList"
-                :key="item?.id"
+                v-for="item in data"
+                :key="item.id"
               >
                 <RouterLink
-                  :to="'/course/' + item?.id"
+                  :to="'/course/' + item.id"
                   class="nav__dropdown-link"
                   @click="(menuToggle = false), (dropdownList = false)"
-                  >{{ item?.name }}</RouterLink
+                  >{{ item.name }}</RouterLink
                 >
               </li>
             </ul>

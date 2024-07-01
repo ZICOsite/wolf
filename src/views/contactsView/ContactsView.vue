@@ -1,6 +1,9 @@
 <script setup>
 import Typography from "@/components/UI/Typography.vue";
 import Card from "@/components/UI/Card.vue";
+import useFetch from "@/services/api";
+const { data, isFetching, fetchData } = useFetch();
+fetchData("common/contact-us/list/");
 </script>
 
 <template>
@@ -8,10 +11,10 @@ import Card from "@/components/UI/Card.vue";
         <div class="container">
             <Typography tagName="h2" class="contacts__title title">Контакты</Typography>
             <div class="contacts__cards">
-                <Card v-for="item in 4" :key="item" class="contacts__card">
-                    <Typography tagName="h2" class="contacts__card-title">Алина Кусакина</Typography>
-                    <Typography tagName="p" class="contacts__card-txt">Какой-то текст с призывом на действие или просто текст</Typography>
-                    <a href="tel:++998999999999" class="contacts__card-call">+7 (495) 136-95-96</a>
+                <Card v-for="item in data" :key="item" class="contacts__card">
+                    <Typography tagName="h2" class="contacts__card-title">{{item.employee_name}}</Typography>
+                    <Typography tagName="p" class="contacts__card-txt">{{ item.description }}</Typography>
+                    <a :href="`tel:${item.phone_number}`" class="contacts__card-call">{{ item.phone_number }}</a>
                 </Card>
             </div>
         </div>

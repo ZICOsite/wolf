@@ -63,15 +63,15 @@ const currentPage = ref(1);
               <RouterLink
                 :to="'/case/' + item.id"
                 v-for="item in data?.results"
-                :key="item"
+                :key="item.id"
                 class="cases__content-link"
               >
                 <Card class="cases__card">
-                  <img :src="item.image" alt="" class="cases__card-image" />
+                  <img :src="item.case_author.image" alt="" class="cases__card-image" />
                   <Typography tagName="h3" class="cases__card-title">{{
-                    item.company_name
+                    item.case_author.company_name
                   }}</Typography>
-                  <Typography tagName="p" class="cases__card-txt">{{
+                  <Typography v-if="true" tagName="p" class="cases__card-txt">{{
                     item.title
                   }}</Typography>
                 </Card>
