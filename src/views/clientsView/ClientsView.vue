@@ -2,6 +2,11 @@
 import Typography from "@/components/UI/Typography.vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay } from "swiper/modules";
+import useFetch from "@/services/api";
+
+const { data, isFetching, fetchData } = useFetch();
+
+fetchData("common/partner/list/");
 
 // Import Swiper styles
 import "swiper/css";
@@ -35,8 +40,8 @@ const breakpoints = {
             delay: 0,
           }"
         >
-          <SwiperSlide v-for="item in 10" :key="item">
-            <img src="@i/logo.svg" alt="" class="clients__carousel-image" />
+          <SwiperSlide v-for="item in data" :key="item.name">
+            <img :src="item.logo" alt="" class="clients__carousel-image" />
           </SwiperSlide>
         </Swiper>
       </div>
