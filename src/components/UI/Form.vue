@@ -1,3 +1,3 @@
 <template>
-    <form action="" class="form"><slot/></form>
+    <form class="form"><slot/></form>
 </template>
